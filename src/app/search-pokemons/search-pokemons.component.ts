@@ -30,10 +30,6 @@ export class SearchPokemonsComponent implements OnInit {
               }
 
               this.results =  this.pokemonData;
-
-              
-     
-
         },
         error => {
           this.pokemons = [];
@@ -41,7 +37,6 @@ export class SearchPokemonsComponent implements OnInit {
           console.error(error);
         }
       );
-
 
   }
 

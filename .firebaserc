@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "prod": "pokemate-fd8d4",
+    "default": "pokemate-fd8d4"
+  }
+}
