@@ -1,2 +1,0 @@
-# pokemate
-Pokemon Gallery
