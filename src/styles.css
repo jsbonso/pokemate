@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+.caption {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+}
+
+.title {
+    color: #ffffff;
+
+}
