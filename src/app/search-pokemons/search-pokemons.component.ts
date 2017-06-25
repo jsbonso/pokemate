@@ -52,7 +52,7 @@ export class SearchPokemonsComponent implements OnInit {
     this.results = [];
     for (var _i = 0; _i < this.pokemonData.length; _i++) {
        var pokemon =  this.pokemonData[_i];
-       if (pokemon.name.toLowerCase().indexOf(searchTerm.toLowerCase()) === -0){
+       if (pokemon.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1){
            this.results.push(pokemon);
        }
     }

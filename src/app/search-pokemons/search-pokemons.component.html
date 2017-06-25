@@ -1,29 +1,25 @@
 
 
 
- <div class="container">
+ <div class="container justify-content-center">
  <div class="row">
 
       <!-- Search -->
       <div class="input-group">
 
-        <input #searchTerm type="text" class="form-control" placeholder="Search for Pokemon">
+        <input #searchTerm type="text" class="form-control" placeholder="Search for Pokemon"
+        (keyup)="searchPokemonByName(searchTerm.value)">
         <span class="input-group-btn">
           <button class="btn btn-primary" type="button" (click)="searchPokemonByName(searchTerm.value)">Go!</button>
         </span>
-
       </div>
-      
-   <div *ngIf="!results.length">
-     <div class="mx-auto">No pokemon found</div>
-   </div>
 
-   <div class="col-lg-3" *ngFor="let pokemon of results">
+   <div class="col-lg-3 col-sm-12 col-md-6 justify-content-center" *ngFor="let pokemon of results">
 
-     <div >
-     <img src="/assets/images/{{pokemon.id}}.png" />
-      <b>#{{pokemon.id}}</b>
-      {{pokemon.name}}
+     <div>
+     <img src="/assets/images/{{pokemon.id}}.png" /><br />
+      <span class="text-center">#{{pokemon.id}}</span>
+      <h4>{{pokemon.name}}</h4>
      </div>
 
   </div>
