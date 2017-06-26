@@ -5,6 +5,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SearchPokemonsComponent } from './search-pokemons/search-pokemons.component';
 import { SearchPokemonsService } from './search-pokemons.service';
+
+import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +15,8 @@ import { SearchPokemonsService } from './search-pokemons.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    NgxPaginationModule
   ],
   providers: [SearchPokemonsService],
   bootstrap: [AppComponent]

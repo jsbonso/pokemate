@@ -14,6 +14,7 @@ export class SearchPokemonsComponent implements OnInit {
   results: any[] = [];
   pokemonData: Pokemon[] = [];
   errorText : string;
+  p: number = 1;
 
   constructor(private searchService : SearchPokemonsService) { 
 

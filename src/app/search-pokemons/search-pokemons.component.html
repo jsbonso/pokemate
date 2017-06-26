@@ -14,14 +14,21 @@
         </span>
       </div>
 
-   <div class="col-lg-3 col-sm-12 col-md-6 justify-content-center" *ngFor="let pokemon of results">
+   <div class="col-lg-3 col-sm-12 col-md-6 justify-content-center"
+        *ngFor="let pokemon of results | paginate: { itemsPerPage: 20, currentPage: p }">
 
      <div>
      <img src="/assets/images/{{pokemon.id}}.png" /><br />
       <span class="text-center">#{{pokemon.id}}</span>
       <h4>{{pokemon.name}}</h4>
      </div>
-
   </div>
+  
+
+
+<div class="col-lg-12 col-sm-12 col-md-12 justify-content-center mt-5">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
 </div>
 
